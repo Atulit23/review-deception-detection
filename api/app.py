@@ -3,7 +3,6 @@ import requests
 from datetime import datetime
 import pandas as pd
 import numpy as np
-from string import ascii_lowercase
 from gensim.models import Doc2Vec
 import snowballstemmer, re
 import requests
@@ -152,7 +151,7 @@ def getReviews(soup, site, url):
 def preprocess_text(text):
     stemmer = snowballstemmer.EnglishStemmer()
     text = " ".join(stemmer.stemWords(re.sub('[!"#%\'()*+,-./:;<=>?@[\\]^_`{|}~1234567890’”“′‘\\\\]', ' ', text).split(' ')))
-    stop_words = set(["may", "also", "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "across","among", "beside", "however", "yet", "within"] + list(ascii_lowercase))
+    stop_words = set(["may", "also", "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "across","among", "beside", "however", "yet", "within"] + list('abcdefghijklmnopqrstuvwxyz'))
     stop_list = stemmer.stemWords(stop_words)
     stop_words.update(stop_list)
     text = " ".join(filter(None, filter(lambda word: word not in stop_words, text.lower().split(' '))))
