@@ -11,14 +11,12 @@ from bs4 import BeautifulSoup
 import re, sys
 from tensorflow.keras.models import load_model
 import joblib
-import numpy as np
 
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36, Opera/9.80 (Windows NT 6.1; WOW64) Presto/2.12.388 Version/12.18'
 }
 
 app = Flask(__name__)
-
 
 def getsoup(url):
     response = requests.get(url, headers=headers)
