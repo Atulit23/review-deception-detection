@@ -5,8 +5,6 @@ import pandas as pd
 import numpy as np
 from string import ascii_lowercase
 from gensim.models import Doc2Vec
-from gensim.models import doc2vec
-from gensim.models import KeyedVectors
 import snowballstemmer, re
 import requests
 from bs4 import BeautifulSoup
