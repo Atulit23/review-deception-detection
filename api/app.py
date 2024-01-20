@@ -160,7 +160,8 @@ def preprocess_text(text):
 def vectorize_comments_(df, d2v_model):
     y = []
     comments = []
-    for i in range(0, len(df)):
+    for i in range(0, len(df)): 
+        
         print(i)
         label = 'SENT_%s' %i
         comments.append(d2v_model.docvecs[label])
