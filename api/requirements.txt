@@ -10,3 +10,4 @@ snowballstemmer
 requests
 bs4
 tensorflow
+joblib
