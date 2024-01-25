@@ -12,3 +12,4 @@ bs4
 tensorflow
 joblib
 gunicorn
+lxml
