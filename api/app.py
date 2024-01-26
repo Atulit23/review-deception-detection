@@ -218,7 +218,7 @@ def scraper(url):
 
     arr = []
     for i, j in enumerate(argMax):
-        if j == 3 or j == 0:
+        if j == 2 or j == 1:
             arr.append(list(df3['Review_text'])[i])
     return arr
 
